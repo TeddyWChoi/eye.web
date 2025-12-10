@@ -22,31 +22,30 @@ export function PhoneMockup() {
   return (
     <div className="relative">
       {/* Phone frame */}
-      <div className="relative w-[280px] h-[580px] bg-gray-900 rounded-[3rem] border-[8px] border-gray-800 shadow-2xl overflow-hidden">
+      <div className="relative w-[280px] h-[580px] bg-gray-900 rounded-[3rem] border-[8px] border-gray-800 shadow-2xl overflow-hidden" style={{ marginTop: '-50px' }}>
         {/* Screen bezel */}
         <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden">
           {/* Notch */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-gray-900 rounded-b-2xl z-20" />
-          
+
           {/* Screen content - Real App Screenshot */}
-          <div className={`relative w-full h-full bg-black transition-all duration-150 ${
-            screenGlitch ? 'brightness-150 hue-rotate-180' : ''
-          }`}>
+          <div className={`relative w-full h-full bg-black transition-all duration-150 ${screenGlitch ? 'brightness-150 hue-rotate-180' : ''
+            }`}>
             {/* Real app screenshot */}
-            <img 
-              src={appScreenshot} 
-              alt="영안 앱 화면" 
+            <img
+              src={appScreenshot}
+              alt="영안 앱 화면"
               className="w-full h-full object-cover"
             />
-            
+
             {/* Noise overlay */}
             <div className="absolute inset-0 opacity-20 bg-noise-pattern animate-noise mix-blend-overlay pointer-events-none" />
-            
+
             {/* Scan lines effect */}
             <div className="absolute inset-0 pointer-events-none">
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-red-900/5 to-transparent animate-scan" />
             </div>
-            
+
             {/* Glitch bars */}
             {screenGlitch && (
               <>
@@ -57,18 +56,18 @@ export function PhoneMockup() {
             )}
           </div>
         </div>
-        
+
         {/* Power button */}
         <div className="absolute -right-1 top-24 w-1 h-12 bg-gray-700 rounded-l" />
-        
+
         {/* Volume buttons */}
         <div className="absolute -left-1 top-20 w-1 h-8 bg-gray-700 rounded-r" />
         <div className="absolute -left-1 top-32 w-1 h-8 bg-gray-700 rounded-r" />
       </div>
-      
+
       {/* Phone glow */}
       <div className="absolute inset-0 -z-10 blur-3xl bg-red-900/30 scale-110 animate-pulse" />
-      
+
       {/* Floating particles around phone */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 -left-4 w-1 h-1 bg-red-600 rounded-full opacity-60 animate-float-particle-1" />
