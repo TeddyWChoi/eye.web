@@ -16,16 +16,16 @@ export function Features() {
       details: ['유령 사진 갤러리', '존재별 상세 정보', '숨겨진 스토리 파편']
     },
     {
-      icon: Gauge,
-      title: '저주 게이지',
-      description: '위험한 상호작용은 저주 게이지를 증가시킵니다. 가득 차면... 무슨 일이 일어날까요?',
-      details: ['실시간 위험도 측정', '행동에 따른 게이지 변화', '저주 발동 시스템']
-    },
-    {
       icon: Map,
       title: '스토리 퀘스트',
       description: '특정 유령과의 만남은 퀘스트로 이어집니다. 그들의 과거를 파헤치고 진실을 밝히세요.',
       details: ['다층적 서사 구조', '유품 & 단서 수집', '한국 무속 설화 기반']
+    },
+    {
+      icon: Gauge,
+      title: '저주 게이지',
+      description: '위험한 상호작용은 저주 게이지를 증가시킵니다. 가득 차면... 무슨 일이 일어날까요?',
+      details: ['실시간 위험도 측정', '행동에 따른 게이지 변화', '저주 발동 시스템']
     }
   ];
 
@@ -33,10 +33,10 @@ export function Features() {
     <section className="relative py-32 px-6 bg-gradient-to-b from-gray-900 via-black to-black overflow-hidden">
       {/* Noise texture */}
       <div className="absolute inset-0 opacity-20 mix-blend-overlay bg-noise-effect" />
-      
+
       {/* Eerie fog effect */}
       <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70" />
-      
+
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Section header */}
         <div className="text-center mb-20 relative">
@@ -61,24 +61,24 @@ export function Features() {
         {/* Features list */}
         <div className="space-y-12">
           {features.map((feature, index) => (
-            <div 
+            <div
               key={index}
               className="group relative bg-gradient-to-br from-gray-900 via-black to-gray-900 border border-red-900/30 hover:border-red-600 transition-all duration-300 overflow-hidden"
             >
               {/* Distressed edges */}
               <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-red-900/50 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-red-900/40 to-transparent" />
-              
+
               {/* Blood splatter corner */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-red-950/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-              
+
               <div className="grid md:grid-cols-[300px_1fr] gap-0">
                 {/* Icon section */}
                 <div className="relative bg-black border-r border-red-900/30 p-8 flex flex-col items-center justify-center overflow-hidden">
                   {/* Scratch marks background */}
                   <div className="absolute top-0 left-4 w-px h-24 bg-gradient-to-b from-transparent via-red-900/30 to-transparent opacity-50" />
                   <div className="absolute top-0 left-6 w-px h-20 bg-gradient-to-b from-transparent via-red-800/20 to-transparent opacity-30" />
-                  
+
                   <div className="relative mb-4">
                     <feature.icon className="w-16 h-16 text-red-600 group-hover:scale-110 transition-transform duration-300 relative z-10" />
                     <div className="absolute inset-0 blur-2xl bg-red-600 opacity-0 group-hover:opacity-60 transition-opacity" />
@@ -94,11 +94,11 @@ export function Features() {
                 <div className="p-8 relative">
                   {/* Background blood stain */}
                   <div className="absolute bottom-4 right-8 w-20 h-20 bg-red-950/20 rounded-full blur-2xl" />
-                  
+
                   <p className="text-gray-300 mb-6 leading-relaxed relative z-10">
                     {feature.description}
                   </p>
-                  
+
                   <ul className="space-y-2 relative z-10">
                     {feature.details.map((detail, detailIndex) => (
                       <li key={detailIndex} className="flex items-center gap-3 text-sm text-gray-400">
@@ -116,7 +116,7 @@ export function Features() {
           ))}
         </div>
       </div>
-      
+
       <style>{`
         .horror-title {
           font-family: 'Noto Serif KR', serif;

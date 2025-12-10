@@ -27,16 +27,16 @@ export default function App() {
   return (
     <div className="relative bg-black text-white min-h-screen">
       {showGlitch && <GlitchEffect />}
-      
+
       <Hero />
       <Concept />
+      <Process />
+      <Features />
       <HongdaeMap />
       <GhostScroll />
       <HorrorElements />
-      <Features />
-      <Process />
       <CallToAction />
-      
+
       {/* Background effects */}
       <div className="fixed inset-0 pointer-events-none opacity-5">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(139,0,0,0.3),transparent_50%)]" />
